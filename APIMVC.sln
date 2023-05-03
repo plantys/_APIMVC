@@ -3,22 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API1", "API1.csproj", "{554B3ED4-92A1-4F1A-B3C8-DCD41AD55589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API1", "API1\API1.csproj", "{554B3ED4-92A1-4F1A-B3C8-DCD41AD55589}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API2", "..\API2\API2.csproj", "{9C773477-A2B9-468C-B8C5-A4226A028A6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API2", "API2\API2.csproj", "{9C773477-A2B9-468C-B8C5-A4226A028A6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API3", "..\API3\API3.csproj", "{F268D4A1-E3BA-43AA-8FB6-3E65F51E8773}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API3", "API3\API3.csproj", "{F268D4A1-E3BA-43AA-8FB6-3E65F51E8773}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC1", "..\MVC1\MVC1.csproj", "{A611259C-4ED6-4368-AB77-41762AB791DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC1", "MVC1\MVC1.csproj", "{A611259C-4ED6-4368-AB77-41762AB791DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC2", "..\MVC2\MVC2.csproj", "{41A0B016-B702-4657-A0EB-6F02C048C149}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC2", "MVC2\MVC2.csproj", "{41A0B016-B702-4657-A0EB-6F02C048C149}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{68BBD913-5C0E-479A-9A05-C87038743AFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NswagStudioPetStore", "NswagStudioPetStore\NswagStudioPetStore.csproj", "{5BA7CC65-7CEC-49AC-9D6F-3FD257252204}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PurpleBank", "PurpleBank\PurpleBank.csproj", "{67493786-B49A-4EE1-8422-A92CAB880BDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{62EEB17F-41CF-47B7-90A2-8B0F4527B3C9}"
 	ProjectSection(SolutionItems) = preProject
+		NSwagStudio settings.pdf = NSwagStudio settings.pdf
+		CSharpControllerSettings.nswag = CSharpControllerSettings.nswag
 		ReadMe.txt = ReadMe.txt
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NswagStudioPetStore", "..\NswagStudioPetStore\NswagStudioPetStore.csproj", "{5BA7CC65-7CEC-49AC-9D6F-3FD257252204}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +54,10 @@ Global
 		{5BA7CC65-7CEC-49AC-9D6F-3FD257252204}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BA7CC65-7CEC-49AC-9D6F-3FD257252204}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BA7CC65-7CEC-49AC-9D6F-3FD257252204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67493786-B49A-4EE1-8422-A92CAB880BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67493786-B49A-4EE1-8422-A92CAB880BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67493786-B49A-4EE1-8422-A92CAB880BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67493786-B49A-4EE1-8422-A92CAB880BDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

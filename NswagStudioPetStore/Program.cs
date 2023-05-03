@@ -17,7 +17,7 @@ builder.Services.AddRazorPages();
 
 // Add Swagger services
 builder.Services.AddSwaggerGen(c => {
- c.SwaggerDoc("v1", new OpenApiInfo { Title = "APIFirstSample", Version = "v1" });
+ c.SwaggerDoc("v1", new OpenApiInfo { Title = "NswagStudioPetStore", Version = "v1" });
 });
 
 var app = builder.Build();
@@ -33,7 +33,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseSwagger();
 app.UseSwaggerUI(c => {
- c.SwaggerEndpoint("/swagger/v1/swagger.json", "APIFirstSample v1");
+ c.SwaggerEndpoint("/swagger/v1/swagger.json", "NswagStudioPetStore v1");
  c.RoutePrefix = string.Empty; 
 });
 
