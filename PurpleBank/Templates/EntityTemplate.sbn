@@ -1,11 +1,13 @@
-﻿using System;
+﻿{{~ for entity in entities ~}}
+using System;
 
-namespace {{ entity.namespace }}
+namespace {{ entity.Namespace }}
 {
-    public class {{ entity.class_name }}
+    public class {{ entity.ClassName }}
     {
-        {{~ for property in entity.properties ~}}
-        public {{ property.type }} {{ property.name }} { get; set; }
+        {{~ for property in entity.Properties ~}}
+        public {{ property.Type }} {{ property.Name }} { get; set; }
         {{~ end ~}}
     }
 }
+{{~ end ~}}

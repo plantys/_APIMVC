@@ -14,7 +14,9 @@ using PurpleBank.Models;
 using PurpleBank.CodeGeneration;
 
 var entityModels = ModelBuilder.BuildModels();
-var generatedEntities = ScribanCodeGenerator.GenerateCode(entityModels.Select(em => em.EntityType).ToList());
+var generatedEntities = ScribanCodeGenerator.GenerateCode(entityModels); //ans01
+//var generatedEntities = ScribanCodeGenerator.GenerateCode(entityModels).ToList(); //ans01
+//var generatedEntities = ScribanCodeGenerator.GenerateCode(entityModels.Select(em => em.EntityType).ToList());
 
 
 //Dictionary<string, string> generatedEntities = ScribanCodeGenerator.GenerateCode(entityModels.Select(em => em.EntityType).ToList());
@@ -22,7 +24,6 @@ var generatedEntities = ScribanCodeGenerator.GenerateCode(entityModels.Select(em
 
 
 foreach (var generatedEntity in generatedEntities) {
-
  var fileName = $"GeneratedEntities/{generatedEntity}.cs";
  File.WriteAllText(fileName, generatedEntity);
 }

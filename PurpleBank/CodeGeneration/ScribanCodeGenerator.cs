@@ -1,4 +1,30 @@
-﻿using Scriban;
+﻿using System.Collections.Generic;
+using System.IO;
+using PurpleBank.TemplateModels;
+using Scriban;
+//ans01a
+namespace PurpleBank.CodeGeneration {
+
+ public class ScribanCodeGenerator {
+
+  public static List<string> GenerateCode(List<EntityModel> models) {
+   var templateText = File.ReadAllText("Templates/EntityTemplate.sbn");
+   var template = Template.Parse(templateText);
+
+   var generatedEntities = new List<string>();
+   foreach (var model in models) {
+    string result = template.Render(new { entities = models });
+    var filePath = Path.Combine("GeneratedEntities", $"{model.ClassName}.cs");
+    File.WriteAllText(filePath, result);
+    generatedEntities.Add(filePath);
+   }
+
+   return generatedEntities;
+  }
+ }
+}
+
+/*using Scriban;
 
 namespace PurpleBank.CodeGeneration {
 
@@ -10,9 +36,8 @@ namespace PurpleBank.CodeGeneration {
 
    var generatedEntities = new List<string>();
    foreach (var model in models) {
-    var result = template.Render(new { Model = model }, member => member.Name);
-    //var fileName = $"{model.Name}.cs";
-    //var filePath = Path.Combine("GeneratedEntities", "test" + fileName);
+    string result = template.Render(new { entities = models }); //ans01
+    //var result = template.Render(new { Model = model }, member => member.Name);
     var filePath = Path.Combine("GeneratedEntities", $"{model.Name}.cs");
     File.WriteAllText(filePath, result);
     generatedEntities.Add(filePath);
@@ -21,7 +46,7 @@ namespace PurpleBank.CodeGeneration {
    return generatedEntities;
   }
  }
-
+*/
 
  //public class ScribanCodeGenerator {
 
@@ -37,7 +62,7 @@ namespace PurpleBank.CodeGeneration {
  //}
 
 
-}
+
 
 //using Scriban;
 //using System.Collections.Generic;
