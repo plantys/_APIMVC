@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Documentation\**" />
+    <Content Remove="Documentation\**" />
+    <EmbeddedResource Remove="Documentation\**" />
+    <None Remove="Documentation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Controllers\PurpleBankController - Orig.cs" />
   </ItemGroup>
 
