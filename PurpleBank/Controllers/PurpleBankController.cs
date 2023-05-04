@@ -13,7 +13,7 @@
 #pragma warning disable 3016 // Disable "CS3016 Arrays as attribute arguments is not CLS-compliant"
 #pragma warning disable 8603 // Disable "CS8603 Possible null reference return"
 
-namespace MyNamespace {
+namespace PurpleBank.Controllers {
  using System = global::System;
 
  [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.18.2.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v13.0.0.0))")]
@@ -620,7 +620,7 @@ namespace MyNamespace {
   [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("banking/accounts")]
   public System.Threading.Tasks.Task<ResponseBankingAccountListV2> ListAccounts([Microsoft.AspNetCore.Mvc.FromQuery(Name = "product-category")] ProductCategory? product_category, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "open-status")] OpenStatus? open_status, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "is-owned")] bool? is_owned, [Microsoft.AspNetCore.Mvc.FromQuery] int? page, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "page-size")] int? page_size, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-v")] string x_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-min-v")] string x_min_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-interaction-id")] string x_fapi_interaction_id, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-auth-date")] string x_fapi_auth_date, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-customer-ip-address")] string x_fapi_customer_ip_address, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-cds-client-headers")] string x_cds_client_headers) {
 
-   return _implementation.ListAccountsAsync(product_category, open_status ?? MyNamespace.OpenStatus.ALL, is_owned, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
+   return _implementation.ListAccountsAsync(product_category, open_status ?? PurpleBank.Controllers.OpenStatus.ALL, is_owned, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
   }
 
   /// <summary>
@@ -644,7 +644,7 @@ namespace MyNamespace {
   [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("banking/accounts/balances")]
   public System.Threading.Tasks.Task<ResponseBankingAccountsBalanceList> ListBalancesBulk([Microsoft.AspNetCore.Mvc.FromQuery(Name = "product-category")] ProductCategory2? product_category, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "open-status")] OpenStatus2? open_status, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "is-owned")] bool? is_owned, [Microsoft.AspNetCore.Mvc.FromQuery] int? page, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "page-size")] int? page_size, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-v")] string x_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-min-v")] string x_min_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-interaction-id")] string x_fapi_interaction_id, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-auth-date")] string x_fapi_auth_date, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-customer-ip-address")] string x_fapi_customer_ip_address, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-cds-client-headers")] string x_cds_client_headers) {
 
-   return _implementation.ListBalancesBulkAsync(product_category, open_status ?? MyNamespace.OpenStatus2.ALL, is_owned, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
+   return _implementation.ListBalancesBulkAsync(product_category, open_status ?? PurpleBank.Controllers.OpenStatus2.ALL, is_owned, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
   }
 
   /// <summary>
@@ -812,7 +812,7 @@ namespace MyNamespace {
   [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("banking/accounts/direct-debits")]
   public System.Threading.Tasks.Task<ResponseBankingDirectDebitAuthorisationList> ListDirectDebitsBulk([Microsoft.AspNetCore.Mvc.FromQuery(Name = "product-category")] ProductCategory3? product_category, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "open-status")] OpenStatus3? open_status, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "is-owned")] bool? is_owned, [Microsoft.AspNetCore.Mvc.FromQuery] int? page, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "page-size")] int? page_size, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-v")] string x_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-min-v")] string x_min_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-interaction-id")] string x_fapi_interaction_id, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-auth-date")] string x_fapi_auth_date, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-customer-ip-address")] string x_fapi_customer_ip_address, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-cds-client-headers")] string x_cds_client_headers) {
 
-   return _implementation.ListDirectDebitsBulkAsync(product_category, open_status ?? MyNamespace.OpenStatus3.ALL, is_owned, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
+   return _implementation.ListDirectDebitsBulkAsync(product_category, open_status ?? PurpleBank.Controllers.OpenStatus3.ALL, is_owned, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
   }
 
   /// <summary>
@@ -880,7 +880,7 @@ namespace MyNamespace {
   [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("banking/payments/scheduled")]
   public System.Threading.Tasks.Task<ResponseBankingScheduledPaymentsList> ListScheduledPaymentsBulk([Microsoft.AspNetCore.Mvc.FromQuery(Name = "product-category")] ProductCategory4? product_category, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "open-status")] OpenStatus4? open_status, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "is-owned")] bool? is_owned, [Microsoft.AspNetCore.Mvc.FromQuery] int? page, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "page-size")] int? page_size, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-v")] string x_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-min-v")] string x_min_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-interaction-id")] string x_fapi_interaction_id, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-auth-date")] string x_fapi_auth_date, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-customer-ip-address")] string x_fapi_customer_ip_address, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-cds-client-headers")] string x_cds_client_headers) {
 
-   return _implementation.ListScheduledPaymentsBulkAsync(product_category, open_status ?? MyNamespace.OpenStatus4.ALL, is_owned, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
+   return _implementation.ListScheduledPaymentsBulkAsync(product_category, open_status ?? PurpleBank.Controllers.OpenStatus4.ALL, is_owned, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
   }
 
   /// <summary>
@@ -926,7 +926,7 @@ namespace MyNamespace {
   [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("banking/payees")]
   public System.Threading.Tasks.Task<ResponseBankingPayeeListV2> ListPayees([Microsoft.AspNetCore.Mvc.FromQuery] Type? type, [Microsoft.AspNetCore.Mvc.FromQuery] int? page, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "page-size")] int? page_size, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-v")] string x_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-min-v")] string x_min_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-interaction-id")] string x_fapi_interaction_id, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-auth-date")] string x_fapi_auth_date, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-fapi-customer-ip-address")] string x_fapi_customer_ip_address, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-cds-client-headers")] string x_cds_client_headers) {
 
-   return _implementation.ListPayeesAsync(type ?? MyNamespace.Type.ALL, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
+   return _implementation.ListPayeesAsync(type ?? PurpleBank.Controllers.Type.ALL, page ?? 1, page_size ?? 25, x_v, x_min_v, x_fapi_interaction_id, x_fapi_auth_date, x_fapi_customer_ip_address, x_cds_client_headers);
   }
 
   /// <summary>
@@ -1007,7 +1007,7 @@ namespace MyNamespace {
   [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("banking/products")]
   public System.Threading.Tasks.Task<ResponseBankingProductListV2> ListProducts([Microsoft.AspNetCore.Mvc.FromQuery] Effective? effective, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "updated-since")] string updated_since, [Microsoft.AspNetCore.Mvc.FromQuery] string brand, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "product-category")] ProductCategory5? product_category, [Microsoft.AspNetCore.Mvc.FromQuery] int? page, [Microsoft.AspNetCore.Mvc.FromQuery(Name = "page-size")] int? page_size, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-v")] string x_v, [Microsoft.AspNetCore.Mvc.FromHeader(Name = "x-min-v")] string x_min_v) {
 
-   return _implementation.ListProductsAsync(effective ?? MyNamespace.Effective.CURRENT, updated_since, brand, product_category, page ?? 1, page_size ?? 25, x_v, x_min_v);
+   return _implementation.ListProductsAsync(effective ?? PurpleBank.Controllers.Effective.CURRENT, updated_since, brand, product_category, page ?? 1, page_size ?? 25, x_v, x_min_v);
   }
 
   /// <summary>
@@ -1997,7 +1997,7 @@ namespace MyNamespace {
   /// </summary>
   [Newtonsoft.Json.JsonProperty("openStatus", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
   [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-  public BankingAccountV2OpenStatus OpenStatus { get; set; } = MyNamespace.BankingAccountV2OpenStatus.OPEN;
+  public BankingAccountV2OpenStatus OpenStatus { get; set; } = PurpleBank.Controllers.BankingAccountV2OpenStatus.OPEN;
 
   /// <summary>
   /// Flag indicating that the customer associated with the authorisation is an owner of the account. Does not indicate sole ownership, however. If not present then 'true' is assumed
@@ -2314,7 +2314,7 @@ namespace MyNamespace {
   /// </summary>
   [Newtonsoft.Json.JsonProperty("repaymentType", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
   [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-  public BankingLoanAccountV2RepaymentType RepaymentType { get; set; } = MyNamespace.BankingLoanAccountV2RepaymentType.PRINCIPAL_AND_INTEREST;
+  public BankingLoanAccountV2RepaymentType RepaymentType { get; set; } = PurpleBank.Controllers.BankingLoanAccountV2RepaymentType.PRINCIPAL_AND_INTEREST;
 
   /// <summary>
   /// The expected or required repayment frequency. Formatted according to [ISO 8601 Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations) (excludes recurrence syntax)
@@ -3349,7 +3349,7 @@ namespace MyNamespace {
   /// </summary>
   [Newtonsoft.Json.JsonProperty("nonBusinessDayTreatment", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
   [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-  public BankingScheduledPaymentRecurrenceIntervalScheduleNonBusinessDayTreatment NonBusinessDayTreatment { get; set; } = MyNamespace.BankingScheduledPaymentRecurrenceIntervalScheduleNonBusinessDayTreatment.ON;
+  public BankingScheduledPaymentRecurrenceIntervalScheduleNonBusinessDayTreatment NonBusinessDayTreatment { get; set; } = PurpleBank.Controllers.BankingScheduledPaymentRecurrenceIntervalScheduleNonBusinessDayTreatment.ON;
 
   /// <summary>
   /// An array of interval objects defining the payment schedule.  Each entry in the array is additive, in that it adds payments to the overall payment schedule.  If multiple intervals result in a payment on the same day then only one payment will be made. Must have at least one entry
@@ -3430,7 +3430,7 @@ namespace MyNamespace {
   /// </summary>
   [Newtonsoft.Json.JsonProperty("nonBusinessDayTreatment", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
   [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-  public BankingScheduledPaymentRecurrenceLastWeekdayNonBusinessDayTreatment NonBusinessDayTreatment { get; set; } = MyNamespace.BankingScheduledPaymentRecurrenceLastWeekdayNonBusinessDayTreatment.ON;
+  public BankingScheduledPaymentRecurrenceLastWeekdayNonBusinessDayTreatment NonBusinessDayTreatment { get; set; } = PurpleBank.Controllers.BankingScheduledPaymentRecurrenceLastWeekdayNonBusinessDayTreatment.ON;
 
   private System.Collections.Generic.IDictionary<string, object> _additionalProperties;
 
