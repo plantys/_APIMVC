@@ -1,13 +1,13 @@
-﻿{{~ for entity in entities ~}}
+﻿{{ for model in models }}
 using System;
 
-namespace {{ entity.Namespace }}
+namespace {{ model.Namespace }}
 {
-    public class {{ entity.ClassName }}
+    public class {{ model.ClassName }}
     {
-        {{~ for property in entity.Properties ~}}
+        {{ for property in model.Properties }}
         public {{ property.Type }} {{ property.Name }} { get; set; }
-        {{~ end ~}}
+        {{ end }}
     }
 }
-{{~ end ~}}
+{{ end }}

@@ -2,7 +2,7 @@
 using System.IO;
 using PurpleBank.TemplateModels;
 using Scriban;
-//ans01a
+
 namespace PurpleBank.CodeGeneration {
 
  public class ScribanCodeGenerator {
@@ -12,8 +12,10 @@ namespace PurpleBank.CodeGeneration {
    var template = Template.Parse(templateText);
 
    var generatedEntities = new List<string>();
+
+   string result = template.Render(new { models = models });
+
    foreach (var model in models) {
-    string result = template.Render(new { entities = models });
     var filePath = Path.Combine("GeneratedEntities", $"{model.ClassName}.cs");
     File.WriteAllText(filePath, result);
     generatedEntities.Add(filePath);
@@ -23,6 +25,7 @@ namespace PurpleBank.CodeGeneration {
   }
  }
 }
+
 
 /*using Scriban;
 
@@ -36,7 +39,7 @@ namespace PurpleBank.CodeGeneration {
 
    var generatedEntities = new List<string>();
    foreach (var model in models) {
-    string result = template.Render(new { entities = models }); //ans01
+    string result = template.Render(new { entities = models }); 
     //var result = template.Render(new { Model = model }, member => member.Name);
     var filePath = Path.Combine("GeneratedEntities", $"{model.Name}.cs");
     File.WriteAllText(filePath, result);
@@ -48,18 +51,18 @@ namespace PurpleBank.CodeGeneration {
  }
 */
 
- //public class ScribanCodeGenerator {
+//public class ScribanCodeGenerator {
 
- // public static void GenerateCode(List<System.Type> models) {
- //  var templateText = File.ReadAllText("Templates/EntityTemplate.sbn");
- //  var template = Template.Parse(templateText);
+// public static void GenerateCode(List<System.Type> models) {
+//  var templateText = File.ReadAllText("Templates/EntityTemplate.sbn");
+//  var template = Template.Parse(templateText);
 
- //  foreach (var model in models) {
- //   var result = template.Render(new { Model = model }, member => member.Name);
- //   File.WriteAllText(Path.Combine("GeneratedEntities", $"{model.Name}.cs"), result);
- //  }
- // }
- //}
+//  foreach (var model in models) {
+//   var result = template.Render(new { Model = model }, member => member.Name);
+//   File.WriteAllText(Path.Combine("GeneratedEntities", $"{model.Name}.cs"), result);
+//  }
+// }
+//}
 
 
 
