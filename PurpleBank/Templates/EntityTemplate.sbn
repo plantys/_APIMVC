@@ -1,0 +1,8 @@
+﻿{{ for model in models }}
+public class {{ model.Name }}
+{
+    {{ for property in model.Properties }}
+    public {{ property.Type }} {{ property.Name }} { get; set; }
+    {{ end }}
+}
+{{ end }}
