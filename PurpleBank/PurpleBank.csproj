@@ -15,16 +15,27 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\PurpleBankController - Orig.cs" />
+    <Compile Remove="Controllers\PurpleBankController-full.cs" />
+    <Compile Remove="Controllers\PurpleBankController-minimal.cs" />
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="Models\PurpleBankModels-dto-useless.cs" />
+    <Compile Remove="Models\PurpleBankModels-minimal.cs" />
+    <Compile Remove="WeatherForecast.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="cds_banking.json" />
+    <Content Remove="CSharpModelCreationConfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="CSharpControllerSettings.nswag" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

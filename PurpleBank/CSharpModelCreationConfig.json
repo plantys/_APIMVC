@@ -1,0 +1,70 @@
+{
+  "runtime": "Net70",
+  "defaultVariables": null,
+  "documentGenerator": {
+    "fromAssembly": {
+      "assemblyPaths": [
+        "bin/Debug/net7.0/PurpleBank.dll"
+      ],
+      "referencePaths": [],
+      "assemblyConfig": null,
+      "scanMethod": "Controller",
+      "useEntryPoint": false,
+      "entryPoint": null,
+      "excludeControllerNames": []
+    }
+  },
+  "codeGenerators": {
+    "openApiToCSharpClient": {
+      "outputFilePath": "Models/PurpleBankModels.cs",
+      "generateClientInterfaces": false,
+      "injectHttpClient": false,
+      "disposeHttpClient": false,
+      "useBaseUrl": false,
+      "generateExceptionClasses": true,
+      "exceptionClass": "ApiException",
+      "wrapDtoExceptions": true,
+      "useHttpRequestMessageCreationMethod": false,
+      "useOperationIdAsMethodName": true,
+      "generateOptionalParameters": false,
+      "generateJsonMethods": false,
+      "enforceFlagEnums": false,
+      "parameterDateTimeFormat": "s",
+      "generateUpdateJsonSerializerSettingsMethod": false,
+      "generateToStringMethod": false,
+      "excludedTypeNames": [],
+      "wrapResponses": false,
+      "generateResponseClasses": true,
+      "responseClass": "ApiResponse",
+      "namespace": "PurpleBank.Models",
+      "requiredPropertiesMustBeDefined": true,
+      "anyType": "object",
+      "dateTimeType": "DateTime",
+      "dateType": "DateTime",
+      "timeType": "TimeSpan",
+      "timeSpanType": "TimeSpan",
+      "arrayType": "System.Collections.Generic.ICollection",
+      "dictionaryType": "System.Collections.Generic.IDictionary",
+      "arrayBaseType": "System.Collections.ObjectModel.Collection",
+      "dictionaryBaseType": "System.Collections.ObjectModel.Dictionary",
+      "classStyle": "Poco",
+      "generateDefaultValues": true,
+      "generateDataAnnotations": true,
+      "excludedParameterNames": [],
+      "handleReferences": false,
+      "generateImmutableArrayProperties": false,
+      "generateImmutableDictionaryProperties": false,
+      "inlineNamedArrays": false,
+      "inlineNamedDictionaries": false,
+      "inlineNamedTuples": true,
+      "inlineNamedAny": true,
+      "generateDtoTypes": true,
+      "generateOptionalPropertiesAsNullable": false,
+      "generateClientClasses": false,
+      "outputType": "File",
+      "newLineBehavior": "Auto",
+      "jsonSerializerSettingsTransformationMethod": null,
+      "useDocumentProvider": false
+    }
+  }
+}
