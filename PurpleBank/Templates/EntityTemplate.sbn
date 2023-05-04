@@ -1,8 +1,11 @@
-﻿{{ for model in models }}
-public class {{ model.Name }}
+﻿using System;
+
+namespace {{ entity.namespace }}
 {
-    {{ for property in model.Properties }}
-    public {{ property.Type }} {{ property.Name }} { get; set; }
-    {{ end }}
+    public class {{ entity.class_name }}
+    {
+        {{~ for property in entity.properties ~}}
+        public {{ property.type }} {{ property.name }} { get; set; }
+        {{~ end ~}}
+    }
 }
-{{ end }}

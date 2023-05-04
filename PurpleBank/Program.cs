@@ -22,6 +22,7 @@ var generatedEntities = ScribanCodeGenerator.GenerateCode(entityModels.Select(em
 
 
 foreach (var generatedEntity in generatedEntities) {
+
  var fileName = $"GeneratedEntities/{generatedEntity}.cs";
  File.WriteAllText(fileName, generatedEntity);
 }

@@ -20,7 +20,9 @@ namespace PurpleBank.CodeGeneration {
 
    // Loop through the types and build an EntityModel for each one
    foreach (SystemType type in types) {
-    if (type.Namespace == "PurpleBank.Models") {
+    if (type.Namespace == "PurpleBank.Models" && !type.Name.Contains("<"))
+     //if (type.Namespace == "PurpleBank.Models") 
+     {
      var entityModel = BuildEntityModel(type);
      models.Add(entityModel);
     }
